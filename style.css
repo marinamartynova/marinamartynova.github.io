@@ -1,0 +1,375 @@
+html {
+    height: 100%;
+    min-width:710px;
+    position:relative;
+    overflow-y: auto;
+}
+body {
+    min-width: 710px;   
+    height: 100%;
+    overflow: hidden;
+}
+
+.loader{
+    background: url(images/loading.gif) no-repeat 50% 100px;
+    background-size: 180px;
+    height: 300px;
+}
+
+#tabs {
+    height: 100%;
+}
+#tabs .tabLine{
+    padding-left: 10px;
+    position: absolute;
+    width: 100%;
+    background-color: #f5f5f6;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+    box-sizing: border-box;
+}
+
+#tabs .tab{
+    flex: 1;
+    line-height: 1.5;
+    font-size: 17px;
+    text-align: left;
+    color: #939598;
+    padding: 14px;
+    display: inline-block; 
+    cursor: pointer;
+    font-family: helioscondblack;
+    text-transform: uppercase;    
+}
+
+.tabActive{
+    border-bottom: 4px solid #0079c2;
+    color: #444 !important;
+}
+
+.tabContentWrap {
+    display:none;
+    height: 100%;
+    padding-top: 60px;
+    box-sizing: border-box;
+} 
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tabContent{
+    display: none;
+    height: 100%;
+    font-family: helioscond;
+}
+
+.tabContentVisible{
+    display:block;
+}
+
+#tabs .cardWrap {
+    overflow: auto;
+    height: 100%;
+}
+
+.card {
+    float: left;
+    width: 440px;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+    margin: 30px 0 0 30px;
+    vertical-align: top;
+}
+
+.card:last-child {
+    margin-bottom: 3%;
+}
+
+.header {
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+    line-height: 1.2;
+    padding: 11px 16px 12px;
+    text-align: left;
+    background: #f4f4f4;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.fa-info-circle:before {
+    color: #444;
+}
+
+.pad {
+    padding-right: 20px;
+}
+
+.tooltip {
+    position: absolute;
+    display: inline-block;
+    right: 16px;
+    top: 12px;
+}
+
+.tooltip .tooltipText {
+    visibility: hidden;
+    width: 250px;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-size: 16px;
+}
+.tooltipLeft {
+    top: -8px;
+    bottom: auto;
+    right: 128%;
+}
+.tooltipLeft::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #555;
+}
+
+.tooltip:hover .tooltipText {
+    visibility: visible;
+}
+
+.container {
+    line-height: 1.2;
+    padding: 11px 16px 12px;
+}	
+
+.clip {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    width: 100%;
+}
+
+.headInstruction {
+    margin-bottom:  15px;
+}
+
+.buttonInstruction {
+    margin: 15px 15px 0 15px;
+}
+
+.btn-group, .btn-group-vertical {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-group>.btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+ .btn-group>.btn:last-child {
+     border-top-right-radius: 4px;
+     border-bottom-right-radius: 4px;
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn {
+    float: left;
+}
+
+.btn-active{
+    color: #fff !important;
+    background-color: #337ab7 !important;
+    border-color: #2e6da4 !important;
+}
+
+.btn:hover {
+    background-color: #f4f4f3;
+}
+
+.btn-default {
+    background-repeat: repeat-x;
+    text-shadow: 0 1px 0 #fff;
+    border-color: #ccc !important;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    user-select: none;
+    background-color: white;
+    margin-left: -1px;
+}
+
+button {
+    overflow: visible;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+}
+
+button, input, optgroup, select, textarea {;
+    font-family: inherit;
+    margin: 0;
+}
+
+.btnContent {
+    display: none;
+    padding-left: 15px;
+    font-family: helioscond;
+}
+
+.form-control {
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control.search {
+    width: 300px;
+    float: right;
+}
+
+.btnContentWrap {
+    box-sizing: border-box;
+    line-height: 1.42857143;
+}
+
+.btnContent {
+    display: none;
+    height: 100%;
+    padding-left: 15px;
+    font-family: helioscond;
+}
+.ContentVisible {
+    display:block;
+}
+
+.document {
+    display: none;
+    position: relative;
+    color: #666;
+    float: left;
+    font-size: 18px;
+    margin: 15px;
+    width: 265px;
+}
+
+.docActive {
+    display: block;
+}
+
+.docIcon {
+    color: #0079c2;
+    font-size: 35px !important;
+    top: 7px;
+    position: absolute;
+}
+
+.docTitle {
+    float:left;
+    height: 50px;
+    margin: 0;
+    padding-left: 40px;
+    overflow: hidden;
+}
+
+.docTitle:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.docGradient {
+    bottom: 0;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    width: 20%;
+    background: linear-gradient(to right, transparent, #fff 100%) !important;
+    background-image: linear-gradient(to right, transparent, rgb(255, 255, 255) 100%);
+
+}
+
+#searchError {
+    display: none;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1 !important;
+}
+
+@font-face {
+    font-family: "helioscond";
+    src: url('fonts/helioscond-webfont.woff') format('woff'),
+    url('fonts/helioscond-webfont.ttf') format('truetype'),
+    url('fonts/helioscond-webfont.svg#helioscondregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "helioscondblack";
+    src: url('fonts/helioscondblack-webfont.eot');
+    src: url('fonts/helioscondblack-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/helioscondblack-webfont.woff') format('woff'),
+    url('fonts/helioscondblack-webfont.ttf') format('truetype'),
+    url('fonts/helioscondblack-webfont.svg#helioscondblackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "helioscond";
+    src: url('fonts/he_cn__b-webfont.woff') format('woff'),
+    url('fonts/he_cn__b-webfont.ttf') format('truetype'),
+    url('fonts/he_cn__b-webfont.svg#helioscondregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
